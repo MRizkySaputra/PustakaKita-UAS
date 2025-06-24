@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="1414.0" style="-fx-background-color: #578FCA;;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pustakakita.controllers.MasterDataDashboard">
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="15.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/book.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="20.0" text="Pustaka Kita">
+               <font>
+                  <Font name="Agency FB Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelWelcome" layoutX="15.0" layoutY="75.0" text="Selamat Datang">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonLogout" layoutX="1335.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleButtonLogoutAction" prefHeight="27.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF;" text="Logout">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClear" layoutX="1319.0" layoutY="64.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF;" text="Clear Filter">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSorting" layoutX="1341.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleBtnCari" prefHeight="27.0" prefWidth="58.0" style="-fx-background-color: #FFFFFF;" text="Cari">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cbxSorting" layoutX="1179.0" layoutY="107.0" prefWidth="150.0" />
+            <Button fx:id="btnExportData" layoutX="378.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleButtonExport" prefHeight="27.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF;" text="Export Data">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtJudulPengarang" alignment="CENTER" layoutX="852.0" layoutY="107.0" prefHeight="27.0" prefWidth="155.0" promptText="Judul/Pengarang">
+               <font>
+                  <Font name="Agency FB Bold" size="14.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cbxKategoriCari" layoutX="1018.0" layoutY="107.0" prefWidth="150.0" promptText="Kategori Buku" />
+            <DatePicker fx:id="dpcSampai" layoutX="665.0" layoutY="107.0" promptText="Sampai Tanggal Pengadaan" />
+            <DatePicker fx:id="dpcDari" layoutX="479.0" layoutY="107.0" promptText="Dari Tanggal Pengadaan" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="440.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="15.0" layoutY="5.0" text="Kode Buku">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="kodeBuku" layoutX="155.0" layoutY="6.0" prefWidth="150.0" />
+            <Label layoutX="15.0" layoutY="40.0" text="Kategori">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="77.0" text="Judul">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="110.0" text="Pengarang">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="147.0" prefHeight="18.0" prefWidth="48.0" text="Penerbit">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="185.0" prefHeight="18.0" prefWidth="68.0" text="Tahun Terbit">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="220.0" prefHeight="18.0" prefWidth="28.0" text="Edisi">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="260.0" prefHeight="18.0" prefWidth="100.0" text="Tanggal Pengadaan">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbxKategori" layoutX="155.0" layoutY="41.0" prefWidth="150.0" promptText="Kategori Buku" />
+            <TextField fx:id="judul" layoutX="155.0" layoutY="78.0" prefWidth="150.0" />
+            <TextField fx:id="pengarang" layoutX="155.0" layoutY="113.0" prefWidth="150.0" />
+            <TextField fx:id="penerbit" layoutX="155.0" layoutY="148.0" prefWidth="150.0" />
+            <TextField fx:id="tahun" layoutX="155.0" layoutY="185.0" prefWidth="150.0" />
+            <TextField fx:id="edisi" layoutX="155.0" layoutY="220.0" prefWidth="150.0" />
+            <DatePicker fx:id="tglPengadaan" layoutX="155.0" layoutY="256.0" prefHeight="26.0" prefWidth="150.0" promptText="MM-DD-YYYY" />
+            <Button fx:id="addBuku" layoutX="15.0" layoutY="303.0" mnemonicParsing="false" onAction="#AddBuku" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" text="Add">
+               <font>
+                  <Font name="Agency FB Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateBuku" layoutX="127.0" layoutY="303.0" mnemonicParsing="false" onAction="#UpdateBuku" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" text="Update">
+               <font>
+                  <Font name="Agency FB Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteBuku" layoutX="234.0" layoutY="303.0" mnemonicParsing="false" onAction="#DeleteBuku" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" text="Delete">
+               <font>
+                  <Font name="Agency FB Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClearData" layoutX="127.0" layoutY="348.0" mnemonicParsing="false" onAction="#clearData" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF;" text="Clear Input">
+               <font>
+                  <Font name="Agency FB Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tblViewBuku" layoutY="2.0" prefHeight="389.0" prefWidth="1075.0">
+              <columns>
+                <TableColumn fx:id="colKodeBuku" prefWidth="75.0" text="Kode Buku" />
+                <TableColumn fx:id="colKategori" prefWidth="160.0" text="Kategori" />
+                  <TableColumn fx:id="colJudul" prefWidth="250.0" text="Judul" />
+                  <TableColumn fx:id="colPengarang" prefWidth="97.0" text="Pengarang" />
+                  <TableColumn fx:id="colPenerbit" prefWidth="113.0" text="Penerbit" />
+                  <TableColumn fx:id="colTahun" prefWidth="113.0" text="TahunTerbit" />
+                  <TableColumn fx:id="colEdisi" prefWidth="100.0" text="Edisi" />
+                  <TableColumn fx:id="colPengadaan" prefWidth="182.0" text="Tanggal Pengadaan" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
